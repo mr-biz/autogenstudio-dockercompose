@@ -12,8 +12,11 @@ ENV PATH="/home/app/.local/bin:${PATH}"
 # set python path
 ENV PYTHONPATH="/home/app/.local/bin:/app:${PYTHONPATH}"
 
-# add autogenstudio to the PATH
-ENV OPENAI_API_KEY="your-key-here"
+# add autogenstudio to the PATH 
+ENV OPENAI_API_KEY=$openAI-token
+
+#RUN --mount=type=secret,id=openAi-token 
+#ENV OPENAI_API_KEY=/run/secrets/openAi-token
 
 RUN autogenstudio version
 

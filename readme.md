@@ -1,13 +1,28 @@
 # Autogen Studio Docker Image
 
-This repository contains a dockerfile which can be used to build a docker image for the Autogen Studio. The docker image can be used to run the Autogen Studio in a docker container.
+This repository contains a Dockerfile which can be used to build a Docker Image for Autogen Studio using Docker Compose.
 
 ## Building the docker image
+
+To build the docker image, run the following commands in the root of this repository:
+
+You will need your OpenAI API token (https://platform.openai.com/api-keys) and save it to ./openAi-token, ensuring to  make it secure.
+
+```bash
+echo "Put Your OpenAi API Token Here" >>  ./openAi-token
+sudo chown root:root ./openAi-token
+sudo chmod 400 ./openAi-token
+```
 
 To build the docker image, run the following command in the root of this repository:
 
 ```bash
-docker build -t autogenstudio .
+sudo docker build -t autogenstudio-dockercompose --secret "id=openAi-token,src=./openAi-token" .
+```
+## Edit the Docker Compose file for your requirements
+
+```bash
+nano compose.yaml
 ```
 
 ## Running the docker image
@@ -15,7 +30,7 @@ docker build -t autogenstudio .
 To run the docker image, run the following command:
 
 ```bash
-docker run -it --rm -p 8081:8081 autogenstudio -e "OPENAI_API_KEY=your_openai_api_key"
+docker compose up -d
 ```
 
-The Autogen Studio will be available at http://localhost:8081.
+The Autogen Studio will be available at http://0.0.0.0:8081 or the port of your choice if you edited compose.yaml accordingly.
