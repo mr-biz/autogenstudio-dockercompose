@@ -4,5 +4,5 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - 39081:8081
+      - 8081:8081
     image: autogenstudio-dockercompose
