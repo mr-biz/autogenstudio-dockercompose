@@ -1,8 +1,13 @@
 version: "3.3"
+
 services:
   autogenstudio-dockercompose:
     stdin_open: true
     tty: true
     ports:
-      - 8081:8081
+      - 39081:8081
     image: autogenstudio-dockercompose
+#    volumes:
+#      - autogenstudio-data:/path/to/mount/point
+#volumes:
+#  autogenstudio-data:
