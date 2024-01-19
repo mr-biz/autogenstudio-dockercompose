@@ -5,9 +5,7 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - 39081:8081
+      - 8081:8081
     image: autogenstudio-dockercompose
-#    volumes:
-#      - autogenstudio-data:/path/to/mount/point
-#volumes:
-#  autogenstudio-data:
+    volumes:
+      - /full / path to / host mount / point:/data
