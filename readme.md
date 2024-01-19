@@ -4,9 +4,14 @@ This repository contains a Dockerfile which can be used to build a Docker Image 
 
 ## Building the docker image
 
-To build the docker image, run the following commands in the root of this repository:
+To build the docker image, run the following commands:
 
-You will need your OpenAI API token (https://platform.openai.com/api-keys) and save it to ./openAi-token, ensuring to  make it secure.
+```bash
+git clone https://github.com/mr-biz/autogenstudio-dockercompose.git
+cd autogenstudio-dockercompose/
+```
+
+You will need your OpenAI API token (https://platform.openai.com/api-keys) and save it to ./openAi-token, ensuring to make it secure.
 
 ```bash
 echo "Put Your OpenAi API Token Here" >>  ./openAi-token
