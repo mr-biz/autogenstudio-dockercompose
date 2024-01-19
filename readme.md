@@ -1,4 +1,4 @@
-# Autogen Studio Docker Image
+# Autogen Studio Docker Compose
 
 This repository contains a Dockerfile which can be used to build a Docker Image for Autogen Studio using Docker Compose.
 
