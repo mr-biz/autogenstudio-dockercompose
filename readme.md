@@ -11,10 +11,14 @@ git clone https://github.com/mr-biz/autogenstudio-dockercompose.git
 cd autogenstudio-dockercompose/
 ```
 
-You will need your OpenAI API token (https://platform.openai.com/api-keys) and save it to ./openAi-token, ensuring to make it secure.
+You will need your OpenAI API token (https://platform.openai.com/api-keys) and save it to ./openAi-token.
 
 ```bash
 echo "Put Your OpenAi API Token Here" >>  ./openAi-token
+```
+Make your token secure.
+
+```bash
 sudo chown root:root ./openAi-token
 sudo chmod 400 ./openAi-token
 ```
